@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrashCoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qk-LI-1rZ">
+                                <rect key="frame" x="105.5" y="438" width="203" height="30"/>
+                                <state key="normal" title="Click here to reproduce crash"/>
+                                <connections>
+                                    <action selector="CreateCrash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SwX-Co-PLK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*requires iPhone 11 or higher with iOS14.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-qf-d89">
+                                <rect key="frame" x="48.5" y="469" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-RN-h7p">
+                                <rect key="frame" x="87" y="555" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Qk-LI-1rZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2f2-c2-Ji8"/>
+                            <constraint firstItem="7Qk-LI-1rZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="34S-w5-KUg"/>
+                            <constraint firstItem="r2g-qf-d89" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5VA-YG-jr3"/>
+                            <constraint firstItem="Vda-RN-h7p" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="6M6-pB-uPr"/>
+                            <constraint firstItem="Vda-RN-h7p" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.142857" id="BwR-LU-VJh"/>
+                            <constraint firstItem="Vda-RN-h7p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kdq-b5-xEA"/>
+                            <constraint firstItem="r2g-qf-d89" firstAttribute="top" secondItem="7Qk-LI-1rZ" secondAttribute="bottom" constant="1" id="fwh-y0-VT6"/>
+                            <constraint firstItem="Vda-RN-h7p" firstAttribute="top" secondItem="r2g-qf-d89" secondAttribute="bottom" constant="65" id="gnT-gh-3Jp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadedImageView" destination="Vda-RN-h7p" id="ojk-hz-8xa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
